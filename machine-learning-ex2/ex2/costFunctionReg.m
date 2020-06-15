@@ -27,7 +27,7 @@ J = ((-y'*log(h)-((1-y)'*log(1-h)))/m)+regu;
 grad = ((X'*(h-y))/m)+((lambda*theta)/m);
 
 
-% grad(1) -= lambda*theta(1)/m;
+grad(1) -= lambda*theta(1)/m;
 % =============================================================
 
 end
