@@ -23,7 +23,15 @@ p = zeros(size(X, 1), 1);
 
 
 
+X = [ones(m,1) X];
 
+a2 = sigmoid(Theta1*X'); % Output of hidden layer, a size(Theta1, 1) x m matrix
+
+a2 = [ones(m,1) a2'];
+
+h_x = sigmoid(Theta2*a2');
+
+[dummy, p] = max(h_x', [], 2);
 
 
 
